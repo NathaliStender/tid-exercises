@@ -14,7 +14,11 @@ export default function TodoList() {
   return (
     <div style={{ color: "lightblue" }}>
       <h1>My Todo List</h1>
-
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
       <input
         type="text"
         value={newItem}
@@ -26,12 +30,6 @@ export default function TodoList() {
       />
 
       <button onClick={handleAddItem}>Add</button>
-
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
     </div>
   );
 }
