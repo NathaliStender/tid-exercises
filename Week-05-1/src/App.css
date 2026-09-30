@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c6e0ed;
+  margin: 0;
+  padding: 2rem 1rem 4rem;
+
+  color: #203044;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(23, 42, 58, 0.12);
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(233, 133, 176, 0.4);
+  outline-offset: 2px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #c8e2f2;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  background: #fff;
+  color: #203044;
+}
+
+.main-inner {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+
+.logout-button {
+  display: block;
+  margin: 0 0 1.5rem auto;
+  padding: 0.55rem 0.9rem;
+  background: transparent;
+  color: #64748b;
+  border: 1px solid rgba(100, 116, 130, 0.35);
+  background-color: #dff4ff;
+  padding: 2rem 1rem;
+.new-list-form {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.new-list-form input {
+  flex: 1;
+  background-color: #d2e3eb;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+.new-list-form button,
+#add-btn {
+  padding: 0.75rem 1rem;
+  padding: 0.5rem;
+  border: 1px solid #b9d9ec;
+  border-radius: 6px;
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+.list-picker {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.list-picker button {
+  padding: 0.65rem 0.9rem;
+  background: rgba(255, 253, 248, 0.72);
+  color: #2e78a8;
+  display: flex;
+  gap: 0.5rem;
+.list-picker .active {
+  background: #4d9ed8;
+  color: white;
+}
+
+.todo-body {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: #ffffff;
+  background-color: #e4b0cf;
+  color: #000;
+
+.todo-body h1 {
+  margin: 0 0 1.5rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+}
+
+.todo-body form {
+  display: flex;
+  gap: 0.65rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #c8e2f2;
+}
+
+.todo-body ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 16px;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding: 0.65rem 0.75rem;
+  background: #fff0f6;
+  border-radius: 12px;
+}
+
+.todo-body li input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #4d9ed8;
+}
+
+.todo-body li span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.todo-body li button {
+  padding: 0.45rem 0.65rem;
+  background: transparent;
+  color: #b94f7d;
+  border: 1px solid rgba(185, 79, 125, 0.28);
+}
+
+/* The auth page has no class, so this targets only its root wrapper. */
+body > div:not(.main-inner) {
+  width: min(100%, 460px);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(61, 116, 153, 0.18);
+}
+
+body > div:not(.main-inner) h1 {
+  margin: 0 0 1.5rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 0.95;
+}
+
+body > div:not(.main-inner) form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+body > div:not(.main-inner) form button {
+  padding: 0.75rem 1rem;
+  background: #e985b0;
+  color: white;
+  font-weight: 700;
+}
+
+body > div:not(.main-inner) form button + button {
+  background: #fff0f6;
+  color: #203044;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .new-list-form,
+  .todo-body form {
+    display: grid;
+  }
+
+  .todo-body li {
+    align-items: flex-start;
+  }
+}

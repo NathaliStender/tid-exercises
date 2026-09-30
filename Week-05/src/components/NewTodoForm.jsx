@@ -1,20 +1,23 @@
 import { useState } from "react";
-import TextInput from "../TextInput.jsx";
 
 export default function NewTodoForm({ onAdd }) {
-  let [task, setTask] = useState("");
+  const [text, setText] = useState("");
 
-  function onButtonClick(event) {
+  function handleSubmit(event) {
     event.preventDefault();
-    onAdd(task);
-    setTask("");
+    onAdd(text);
+    setText("");
   }
 
   return (
-    <form onSubmit={onButtonClick}>
-      <TextInput input={task} setInput={setTask} />
-      <button id="add-button" type="submit" disabled={task.length === 0}>
-        Add New Task
+    <form onSubmit={handleSubmit}>
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="New task"
+      />
+      <button id="add-btn" disabled={text.trim().length === 0}>
+        Add
       </button>
     </form>
   );

@@ -1,18 +1,14 @@
-export default function ToDoItem({ elem, onDelete, onChange }) {
+export default function ToDoItem({ todo, onToggle, onRemove }) {
   return (
     <li>
       <input
         type="checkbox"
-        checked={elem.done}
-        onChange={() => onChange(elem.id)}
+        checked={todo.done}
+        onChange={() => onToggle(todo.id)}
       />
-      {elem.text}
-      <button
-        type="button"
-        onClick={() => {
-          onDelete(elem.id);
-        }}
-      >
+
+      <span>{todo.text}</span>
+      <button type="button" onClick={() => onRemove(todo.id)}>
         Delete
       </button>
     </li>

@@ -3,7 +3,7 @@ import "./App.css";
 import ToDoList from "./components/ToDoList.jsx";
 import NewListForm from "./components/NewListForm.jsx";
 import Parse from "parse";
-import AuthPage from "./pages/AuthPage.jsx";
+import AuthPage from "./pages/AuthPage.js";
 import { createList, fetchLists } from "./service/listServices.js";
 
 Parse.initialize(
