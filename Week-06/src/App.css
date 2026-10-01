@@ -1,0 +1,118 @@
+body {
+  background-color: #dff4ff;
+  margin: 0;
+  padding: 2rem 1rem;
+  color: #203044;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+button {
+  background-color: #d2e3eb;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #b9d9ec;
+  border-radius: 6px;
+}
+
+.main-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.logout-button {
+  align-self: flex-end;
+  background-color: transparent;
+  color: #64748b;
+}
+
+.new-list-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.new-list-form input {
+  flex: 1;
+}
+
+.new-list-form button,
+#add-btn {
+  background-color: #e4b0cf;
+  color: #000;
+}
+
+.list-picker {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.list-picker button {
+  background-color: #ffffff;
+  color: #2e78a8;
+}
+
+.list-picker .active {
+  background-color: #4d9ed8;
+  color: #ffffff;
+}
+
+.todo-body {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.todo-body h1 {
+  margin-top: 0;
+}
+
+.todo-body form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-body form input {
+  flex: 1;
+}
+
+.todo-body ul {
+  padding: 0;
+  list-style: none;
+}
+
+.todo-body li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fff0f6;
+  border-radius: 8px;
+}
+
+.todo-body li span {
+  flex: 1;
+}
+
+.todo-body li button {
+  background-color: #f2c1d8;
+  color: #8f3862;
+}
+
+@media (max-width: 600px) {
+  .new-list-form,
+  .todo-body form {
+    flex-direction: column;
+  }
+}
